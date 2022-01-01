@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+
+::-webkit-scrollbar{
+    background-color:#fff2ef;
+    width: .7rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+    border-radius: .7rem;
+}
+
+/* ============= MENU ============*/
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.cabecalho-imagem {
+    height: 72px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px; /*espaçamento entre os elementos filhos */
+}
+
+.cabecalho-menu-item {
+    font-family: 'Sarala', sans-serif;
+    color: #fff2ef;
+    font-weight: 400;
+    font-size: 18px;
+    transition: color 0.3s ease-in; /* Colocar o color, para ocorrer a transição somente na cor */
+    position: relative;
+    padding: 18px;
+}
+
+
+.cabecalho-menu-item:hover {
+  color: rgba(236, 214, 196, 0.53);
+}
+
+.cabecalho-menu-item::after{
+    content: '';
+    width: 0%; /*Para dar o efeito dele crescendo */
+    height: .2rem;
+    background:rgba(236, 214, 196, 0.53);
+    position: absolute;
+    left: 0;
+    bottom: -.2rem;
+    transition: width 0.4s;  /*Para dar o efeito dele crescendo */
+  }
+
+  .cabecalho-menu-item:hover::after{
+    width: 100%;  /*Para dar o efeito dele crescendo */
+  }
+  
+
+
+/* ============= MAIN ============*/
+
+.conteudo {
+    margin-bottom: 48px;
+    border-top: 0.4px solid #fff2ef ;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-size: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    color: #fff2ef;
+}
+
+.conteudo-principal-escrito-subtitulo{
+    font-size: 'Righteous', cursive;
+    font-weight: 400;
+    color: #ecd6c4;
+    font-size: 24px;
+}
+
+/* ============= MAIN-BOTAO ============*/
+
+.conteudo-principal-escrito-botao {
+    background-color: #ecd6c4;
+    width: 180px;
+    height: 60px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2f2325;
+}
+
+.conteudo-principal-escrito-botao:hover {
+    cursor: pointer;
+    background-color: rgba(236, 214, 196, 0.53);
+}
+
+.conteudo-principal-imagem {
+    height: 430px;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 85px;
+}
+
+.conteudo-secundario-titulo {
+    border-top: 0.4px solid #fff2ef; 
+    padding-top: 48px;
+    font-size: 'Righteous', cursive;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff2ef;
+    margin-bottom: 20px;
+}
+
+.conteudo-secundario-paragrafo {
+    font-size: 18px;
+    font-weight: 300;
+    color: #ecd6c4;
+    font-family: 'Sarala', sans-serif;
+}
+
+/* ==== FOOTER =====*/
+
+.rodape{
+     padding: 32px;
+     border-top: 0.4px solid #fff2ef;
+}
+
+.rodape-imagem{
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ============= RESPONSIVO ============*/
+
+@media(max-width:999px){
+  .hamburguer {
+      display: flex;
+  }
+}
